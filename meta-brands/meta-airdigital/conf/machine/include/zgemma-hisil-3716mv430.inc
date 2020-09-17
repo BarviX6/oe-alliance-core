@@ -1,15 +1,17 @@
-PACKAGECONFIG_GL_pn-qtbase = " "
-PACKAGECONFIG_append_pn-qtbase += " linuxfb no-opengl"
+PACKAGECONFIG_GL_pn-qtbase = "no-opengl linuxfb"
+PACKAGECONFIG_FB_pn-qtbase = " "
+
+MACHINE_FEATURES += "qthbbtv qtstalker"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
-    ${@bb.utils.contains('MACHINE_FEATURES', 'hisil-${HICHIPSET}', 'airdigital-bootlogo-${HICHIPSET} airdigital-libs-${HICHIPSET} airdigital-param-${HICHIPSET} airdigital-bootargs-${HICHIPSET} airdigital-fastboot-${HICHIPSET}' , '', d)} \
+    ${@bb.utils.contains('MACHINE_FEATURES', 'hisil-${HICHIPSET}', 'airdigital-bootlogo-${HICHIPSET} airdigital-libs-${HICHIPSET} airdigital-param-${HICHIPSET} airdigital-bootargs-${HICHIPSET} airdigital-fastboot-${HICHIPSET} airdigital-tntfs-${HICHIPSET}' , '', d)} \
     "
 
 TARGET_ARCH = "arm"
-DEFAULTTUNE = "cortexa7thf"
+DEFAULTTUNE = "cortexa7hf"
 
-MKUBIFS_ARGS = "-m 2048 -e 126976 -c 4096"
-UBINIZE_ARGS = "-m 2048 -p 128KiB"
+MKUBIFS_ARGS = "-m 4096 -e 253952 -c 2048"
+UBINIZE_ARGS = "-m 4096 -p 256KiB -s 4096"
 UBI_VOLNAME = "rootfs"
 CMDLINE ?= "console=ttyAMA0,115200n8"
 

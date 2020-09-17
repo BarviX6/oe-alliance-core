@@ -7,7 +7,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit deploy
 
-SRCDATE = "20200601"
+SRCDATE = "20200624"
 PR = "${SRCDATE}"
 
 S = "${WORKDIR}/patitions"
@@ -50,7 +50,7 @@ do_deploy() {
 
 addtask deploy before do_build after do_install
 
-SRC_URI[md5sum] = "6eb463266bd9d8067914800765c26fc5"
-SRC_URI[sha256sum] = "b7c1c87618f0a769c0b6e71e4c0b46fbd854aab0721e22aee240b0b5559ec87a"
+SRC_URI[md5sum] = "5fd78dd4f9b2e610f3074a9dabee6288"
+SRC_URI[sha256sum] = "f70ee89f75d24a8f44c58b1aba2013c62cec2f6d6d9906148cfc5a68c2ecce3a"
 
 INSANE_SKIP_${PN} += "already-stripped"

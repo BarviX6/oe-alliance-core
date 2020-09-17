@@ -1,5 +1,5 @@
 KV = "4.4.35"
-SRCDATE = "20200513"
+SRCDATE = "20200720"
 
 RDEPENDS_${PN} = "libjpeg-turbo pulseaudio-lib-rtp"
 PROVIDES += " virtual/blindscan-dvbc virtual/blindscan-dvbs"
@@ -8,8 +8,8 @@ require airdigital-dvb-modules.inc
 
 SRC_URI_append = " file://suspend.sh"
 
-SRC_URI[md5sum] = "4cedacb60a95353ad57a71111ec7dbdb"
-SRC_URI[sha256sum] = "ee415c6902625f6a89c110386e27c7b619448bbf9a6d84f66d8322f4d3264be6"
+SRC_URI[md5sum] = "ed4f0db7d2307237a86e0da459026ef8"
+SRC_URI[sha256sum] = "67235fc370af0a8067007b69e4b9df8f4531260953b6e0286c2ae777c4d486a6"
 
 INITSCRIPT_NAME = "suspend"
 INITSCRIPT_PARAMS = "start 89 0 ."
