@@ -23,7 +23,6 @@ RRECOMMENDS_${PN} = " \
     enigma2-plugin-extensions-cutlisteditor \
     enigma2-plugin-extensions-epgsearch \
     enigma2-plugin-extensions-imdb \
-    enigma2-plugin-systemplugins-serviceapp \
     enigma2-plugin-extensions-openwebif-themes \
     enigma2-plugin-extensions-openwebif-vxg \
     ", d)} \
