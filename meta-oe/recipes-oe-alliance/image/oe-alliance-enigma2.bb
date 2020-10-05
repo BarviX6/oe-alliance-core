@@ -34,11 +34,12 @@ RRECOMMENDS_${PN} = "\
     enigma2-plugin-extensions-mediascanner \
     enigma2-plugin-extensions-pictureplayer \
     enigma2-plugin-extensions-openwebif \
-	enigma2-plugin-extensions-e2iplayer \
-	enigma2-plugin-extensions-e2iplayer-deps \
+    enigma2-plugin-extensions-e2iplayer \
+    enigma2-plugin-extensions-e2iplayer-deps \
+    enigma2-plugin-extensions-youtube \
     enigma2-plugin-systemplugins-networkbrowser \
     enigma2-plugin-systemplugins-networkwizard \
-    enigma2-plugin-extensions-youtube \
+    enigma2-plugin-systemplugins-serviceapp \
     \
     ${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "", "oe-alliance-drivers", d)} \
     \
